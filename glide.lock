@@ -1,0 +1,22 @@
+hash: c79449b5d3f9f97ee7c1c46f94e4a8a0004e258a4c921f94d4ad9ca313151efc
+updated: 2017-09-22T09:58:55.733935634+02:00
+imports:
+- name: github.com/denisenkom/go-mssqldb
+  version: a8b933e3527b526484b3b4de754ce7c179e8bfd0
+- name: github.com/jmoiron/sqlx
+  version: d9bd385d68c068f1fabb5057e3dedcbcbb039d0f
+  subpackages:
+  - reflectx
+- name: github.com/lib/pq
+  version: 8837942c3e09574accbc5f150e2c5e057189cace
+  subpackages:
+  - oid
+- name: golang.org/x/crypto
+  version: adbae1b6b6fb4b02448a0fc0dbbc9ba2b95b294d
+  subpackages:
+  - md4
+- name: golang.org/x/net
+  version: 057a25b06247e0c51ba15d8ae475feb2fcb72164
+  subpackages:
+  - context
+testImports: []
