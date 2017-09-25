@@ -7,8 +7,12 @@ Go-database allows to create connection object to database in easy way.
 
 ## Quick start
 
-```golang
 
+### MsSql implementation
+```golang
+// you need to import sql driver
+import _ "github.com/denisenkom/go-mssqldb"
+ 
 // connect to MsSql Database
 msSqlConf := dbprovider.MsSqlConfig{
 		Database: "YOUR_DBNAME",
@@ -27,7 +31,12 @@ defer func() {
 		dbase.Close()
 	}
 }()
+```
 
+### Postgres implementation
+```golang
+// you need to import postgres driver
+import _ "github.com/lib/pq"
 
 // connect to Postgres Database
 pqConf := dbprovider.PostgresConfig{
@@ -48,10 +57,36 @@ defer func() {
 		dbase.Close()
 	}
 }()
-
 ```
-## Features
 
+## Features
+Developer can implement in easy way his new dbprovider as he needed for his db. 
+As example let's do it for sqlite
+```golang
+
+// you need to import sqlite driver
+import _ "github.com/mattn/go-sqlite3"
+
+// create your own dbprovide and override two methods
+type SqlLiteConfig struct {
+	DataSource string
+	Version *int 
+}
+
+// DriverName
+func (conf SqlLiteConfig) DriverName() string {
+	return "sqlite3"
+}
+
+//Build method for MsSql
+func (conf SqlLiteConfig) Build() string {
+	var buffer bytes.Buffer
+
+	// your code
+
+	return buffer.String()
+}
+``` 
 
 ## License
 go-database is licensed under the MIT license. (http://opensource.org/licenses/MIT)

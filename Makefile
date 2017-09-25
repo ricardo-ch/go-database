@@ -1,7 +1,6 @@
-.PHONY: build
+.PHONY: build test
 build:
 	 CGO_ENABLED=0 go build -a -ldflags '-s' -installsuffix cgo
 
-.PHONY: test
 test:
-	go test -v `go list ./... | grep -v /examples/`
+	@go test -race -v $(shell go list ./... | grep -v /vendor/)
