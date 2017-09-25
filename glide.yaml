@@ -1,0 +1,5 @@
+package: github.com/ricardo-ch/go-database
+import:
+- package: github.com/denisenkom/go-mssqldb
+- package: github.com/jmoiron/sqlx
+- package: github.com/lib/pq
