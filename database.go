@@ -1,14 +1,6 @@
 package database
 
-import (
-
-	// Import Microsoft SQL driver
-	_ "github.com/denisenkom/go-mssqldb"
-	//Import postgres driver
-	_ "github.com/lib/pq"
-
-	"github.com/jmoiron/sqlx"
-)
+import "github.com/jmoiron/sqlx"
 
 type ConnectionBuilder interface {
 	DriverName() string

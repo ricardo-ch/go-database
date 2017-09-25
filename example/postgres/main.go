@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"log"
 
+	//Import postgres driver
+	_ "github.com/lib/pq"
 	db "github.com/ricardo-ch/go-database"
 	"github.com/ricardo-ch/go-database/dbprovider"
 )

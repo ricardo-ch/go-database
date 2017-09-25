@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	// Import Microsoft SQL driver
+	_ "github.com/denisenkom/go-mssqldb"
 	db "github.com/ricardo-ch/go-database"
 	"github.com/ricardo-ch/go-database/dbprovider"
 )
