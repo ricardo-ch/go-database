@@ -3,3 +3,7 @@ import:
 - package: github.com/denisenkom/go-mssqldb
 - package: github.com/jmoiron/sqlx
 - package: github.com/lib/pq
+- package: github.com/pkg/errors
+- package: github.com/stretchr/testify
+  subpackages:
+  - assert

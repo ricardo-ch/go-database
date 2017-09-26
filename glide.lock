@@ -1,5 +1,5 @@
-hash: c79449b5d3f9f97ee7c1c46f94e4a8a0004e258a4c921f94d4ad9ca313151efc
-updated: 2017-09-22T09:58:55.733935634+02:00
+hash: 041d85de8734ec2572e2a713a5fdde4a96f545e0c37391ca70c99c7166e54ebf
+updated: 2017-09-25T20:26:50.39972659+02:00
 imports:
 - name: github.com/denisenkom/go-mssqldb
   version: a8b933e3527b526484b3b4de754ce7c179e8bfd0
@@ -11,6 +11,12 @@ imports:
   version: 8837942c3e09574accbc5f150e2c5e057189cace
   subpackages:
   - oid
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: github.com/stretchr/testify
+  version: 69483b4bd14f5845b5a1e55bca19e954e827f1d0
+  subpackages:
+  - assert
 - name: golang.org/x/crypto
   version: adbae1b6b6fb4b02448a0fc0dbbc9ba2b95b294d
   subpackages:

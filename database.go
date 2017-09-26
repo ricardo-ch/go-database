@@ -18,10 +18,12 @@ func connect(driverName, connectionString string, maxIdleDBConnections int) (*sq
 	if err != nil {
 		return nil, err
 	}
+
 	setMaxIdleConns(db, maxIdleDBConnections)
 	return db.Unsafe(), nil
 }
 
+// Connect to DB
 func Connect(builder ConnectionBuilder, maxIdleDBConnections int) (*sqlx.DB, error) {
 	return connect(builder.DriverName(), builder.Build(), maxIdleDBConnections)
 }
