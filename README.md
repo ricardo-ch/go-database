@@ -16,7 +16,7 @@ Below is an example you can find MsSql implementation.
 // you need to import sql driver
 import _ "github.com/denisenkom/go-mssqldb"
  
-// connect to MsSql Database
+// set your credentials for MsSql Database
 msSqlConf := dbprovider.MsSqlConfig{
 		Database: "YOUR_DBNAME",
 		Port:     "YOUR_PORT",
@@ -25,7 +25,13 @@ msSqlConf := dbprovider.MsSqlConfig{
 		Password: "YOUR_PWD",
 }
 
-dbase, _ := db.Connect(msSqlConf, 1)
+// in case if you need to use default parametes
+dbase, _ := db.Connect(msSqlConf, nil)
+
+//in case for additional configuration
+// dbase, _ := db.Connect(msSqlConf, func(db *sqlx.DB){
+//	db.SetMaxIdleConns(5)
+// })
 
 // close connection after using
 defer func() {
