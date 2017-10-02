@@ -27,7 +27,7 @@ func main() {
 		Log:      &Log,
 	}
 
-	dbase, err := db.Connect(msSqlConf, 1)
+	dbase, err := db.Connect(msSqlConf, nil)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -39,5 +39,4 @@ func main() {
 			dbase.Close()
 		}
 	}()
-
 }

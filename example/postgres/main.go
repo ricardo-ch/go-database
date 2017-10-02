@@ -28,7 +28,7 @@ func main() {
 		Password: dbPwd,
 	}
 
-	dbase, err := db.Connect(pqConf, -1)
+	dbase, err := db.Connect(pqConf, nil)
 	if err != nil {
 		log.Fatalln(err)
 	}

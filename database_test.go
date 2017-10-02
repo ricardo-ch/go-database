@@ -34,9 +34,6 @@ var connectTests = [2]struct {
 
 func TestConnect(t *testing.T) {
 
-	setMaxIdleConns = func(db *sqlx.DB, maxIdleDBConnections int) {
-	}
-
 	var dbHost = "YOUR_HOST"
 	var dbPort = 0
 	var dbName = "YOUR_DBNAME"
@@ -55,7 +52,7 @@ func TestConnect(t *testing.T) {
 		sqlConnect = test.connect
 
 		//Act
-		_, err := Connect(mssqlConf, -1)
+		_, err := Connect(mssqlConf, nil)
 
 		assert.Equal(t, test.expectedError, err, test.description)
 	}
